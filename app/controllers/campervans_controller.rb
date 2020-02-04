@@ -20,6 +20,11 @@ class CampervansController < ApplicationController
     @campervan = campervan.find(params[:id])
   end
 
+  def update
+    @campervan = Campervan.find(params[:id])
+    @campervan.update(campervan params)
+  end
+
   def destroy
     @campervan = Campervan.find(params[:id])
     @campervan.destroy
