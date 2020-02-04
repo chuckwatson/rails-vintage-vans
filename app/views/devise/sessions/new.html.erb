@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<div class="container">
+<h1 align="center">Log in</h1>
+<h2 align="center">Log in to Vintage Vans Below</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -13,8 +15,15 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: "btn btn-flat" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<br>
+
+  <div>
+    <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-ghost" %>
+    <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-ghost" %>
+  </div>
+
+</div>
