@@ -1,4 +1,5 @@
 class CampervansController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
   def index
     @campervans = Campervan.all
   end
