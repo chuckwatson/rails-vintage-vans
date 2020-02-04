@@ -17,12 +17,12 @@ class CampervansController < ApplicationController
   end
 
   def show
-    @campervan = campervan.find(params[:id])
+    @campervan = Campervan.find(params[:id])
   end
 
   def update
     @campervan = Campervan.find(params[:id])
-    @campervan.update(campervan params)
+    @campervan.update(campervan_params)
   end
 
   def destroy
