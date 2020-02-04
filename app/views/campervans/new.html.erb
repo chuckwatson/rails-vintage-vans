@@ -1,0 +1,27 @@
+<h1>Add a van</h1>
+
+<div class="container">
+  <div class="form-group">
+      <%= simple_form_for @campervan do |f| %>
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title %>
+</div>
+<div class="form-group">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description %>
+</div>
+ <div class="form-group">
+    <%= f.input :photo, as: :file %>
+  </div>
+  <div class=form-submit>
+      <%= f.submit %>
+    </div>
+     </div>
+</div>
+      <% end %>
+
+<br>
+
+<div style="text-align:center;">
+  <%= link_to "Home", campervans_path, class: "btn btn-flat" %>
+</div>
