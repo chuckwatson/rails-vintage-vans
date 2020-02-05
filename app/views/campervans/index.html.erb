@@ -1,0 +1,18 @@
+<div class="page-title">
+  <h1>Pick a ride</h1>
+</div>
+
+<div class="flex-container">
+  <div class="row">
+<% @campervans.each do |campervan| %>
+
+    <div class="col-md-6" style="margin-bottom:10px" "margin-left:10px";>
+    <h4 class="card-title"><%= campervan.title%></h4>
+    <p class="card-description"><%= campervan.description %></p>
+    <p class="card-details"><%= campervan.price %></p>
+     <%= link_to "see details", campervan_path(campervan) %>
+   </div>
+ <% end %>
+  </div>
+</div>
+
