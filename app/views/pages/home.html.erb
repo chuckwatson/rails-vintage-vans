@@ -1,4 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="banner-content text-center">
+    <link href="https://fonts.googleapis.com/css?family=Yesteryear&display=swap" rel="stylesheet">
+    <h1>Vintage Vans</h1>
+    <p>something something something roadtrip...</p>
+    <%= link_to "hop in", campervans_path, class: "btn btn-lg btn-primary" %>
+  </div>
+</div>
 
-<%= link_to "Add campervan", new_campervan_path %>
