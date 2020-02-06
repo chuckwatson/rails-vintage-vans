@@ -1,4 +1,4 @@
-class CreateCampervans < ActiveRecord::Migration[5.2]
+ class CreateCampervans < ActiveRecord::Migration[5.2]
   def change
     create_table :campervans do |t|
       t.string :title
