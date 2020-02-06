@@ -21,6 +21,7 @@ class CampervansController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @campervan = Campervan.find(params[:id])
     @review = Review.new
   end
