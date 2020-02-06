@@ -11,7 +11,7 @@ class CampervansController < ApplicationController
   def create
     @campervan = Campervan.new(campervan_params)
     if @campervan.save
-      redirect_to campervan_path(@campervan)
+      redirect_to campervans_path
     else
       render :new
     end
@@ -35,7 +35,7 @@ class CampervansController < ApplicationController
   private
 
   def campervan_params
-    params.require(:campervan).permit(:name)
+    params.require(:campervan).permit(:title, :description, :address, :price, :photo)
   end
 end
 
