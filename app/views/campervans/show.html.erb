@@ -6,9 +6,13 @@
       <p><%= @campervan.description %></p>
     </div>
     <a class="btn btn-ghost" href="#">Book now</a>
-<!--     #this needs to link to the booking page -->
+    <a class="btn btn-ghost" href="#">Add review</a>
     <h2 class="card-trip-pricing"><%=@campervan.price  %>£</h2>
-    <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+  </div>
+  <div class="write-review">
+    <%= @campervan.reviews.each do |review| %>
+    <%= review.rating %>
+    <% end %>
   </div>
   <div class="booking-form">
     <%= simple_form_for [@campervan, @booking] do |f| %>

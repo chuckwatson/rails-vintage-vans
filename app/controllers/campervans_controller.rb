@@ -6,6 +6,7 @@ class CampervansController < ApplicationController
 
   def new
     @campervan = Campervan.new
+    @review = Review.new
   end
 
   def create
@@ -22,6 +23,7 @@ class CampervansController < ApplicationController
   def show
     @booking = Booking.new
     @campervan = Campervan.find(params[:id])
+    @review = Review.new
   end
 
   def update
