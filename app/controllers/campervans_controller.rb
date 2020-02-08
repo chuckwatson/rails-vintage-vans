@@ -28,6 +28,7 @@ class CampervansController < ApplicationController
   def show
     @booking = Booking.new
     @campervan = Campervan.find(params[:id])
+    @bookings = Booking.where(campervan: @campervan, user: current_user)
     @review = Review.new
   end
 
