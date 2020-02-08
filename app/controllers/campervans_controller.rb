@@ -1,5 +1,6 @@
 class CampervansController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
+
   def index
     @campervans = Campervan.all
   end
@@ -18,6 +19,10 @@ class CampervansController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @campervan = Campervan.find(params[:id])
   end
 
   def show

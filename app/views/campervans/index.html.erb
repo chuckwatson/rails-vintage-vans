@@ -6,22 +6,40 @@
 <div class="flex-container">
   <div class="row">
      <% @campervans.each do |campervan| %>
-       <%= link_to campervan_path(campervan) do %>
+       <%= link_to campervan_path(campervan), class: "text-decoration: none" do %>
 <!-- <div class ="link-card"> -->
-        <div class="col-md-4" style="margin-bottom:10px" "margin-left:10px";>
+        <div class="col-md-4" style="margin-bottom:10px" "margin-left:10px" "margin-right:10px";>
           <img src="<%= cl_image_path campervan.photo.key if campervan.photo.attached? %>" alt="">
             <h4 class="card-title"><%= campervan.title%></h4>
               <p class="card-description"><%= campervan.description %></p>
                 <p class="card-details"><%= campervan.price %></p>
-                 <%= link_to "", campervan_path(campervan),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: 'far fa-trash-alt'%>
+
        <% end %>
         </div>
       <% end %>
    </div>
 
  </div>
+
+<!--
+<main>
+  <section class="cards">
+  <div class="card">
+    <div class="card__image-container">
+      <img src="" alt="">
+    </div>
+    <div class="card__content">
+      <p class="text--medium"></p>
+      <p class="card__price text--medium"></p>
+      <div class="card__info">
+        <p class="text--medium"></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main> -->
+
+
 
 
 

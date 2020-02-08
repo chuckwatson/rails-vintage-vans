@@ -8,13 +8,20 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @campervan = Campervan.find(params[:campervan_id])
     @booking.campervan = @campervan
-    @booking.save
-    redirect_to campervan_path(@campervan)
+    @booking.user = current_user
+    if @booking.save
+    redirect_to campervans_path
+  else
+    render 'campervans/show'
   end
+end
+
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :campervan_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
+
+
 end
