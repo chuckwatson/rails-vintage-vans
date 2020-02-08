@@ -10,12 +10,15 @@ class BookingsController < ApplicationController
     @booking.campervan = @campervan
     @booking.user = current_user
     if @booking.save
-    redirect_to campervans_path
-  else
-    render 'campervans/show'
+      redirect_to campervan_booking_path(@campervan, @booking)
+    else
+      render 'campervans/show'
+    end
   end
-end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
 
   private
 
