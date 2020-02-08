@@ -1,20 +1,33 @@
 <div class="container">
+<!--   <h2 align="center">Hello <%= @booking.user.email %>!</h2> -->
+  <h3 align="center">Your booking is confirmed!</h3>
+  <div class="show-flex" align="center">
+    <div class="card mb-3" align="center" style="width: 35rem;">
+      <div class="card-body" >
+        Congratulations - you have booked: <strong><%= @booking.campervan.title %>!</strong>
+        <br>
+          <div class="card-img-top">
+            <%= cl_image_tag @booking.campervan.photo.key, height: 300, width: 400, crop: :fill %>
+          </div>
+          <br>
+          <ul class="list-group list-group-flush">
+            <div class="booking-show-p">
+              <strong>Booking Details:</strong>
+            </div>
+              <li class="list-group-item"><strong>From:</strong> <%= @booking.start_date.strftime("%d %m %Y") %>, <strong>Until: </strong> <%= @booking.end_date.strftime("%d %m %Y") %></li>
+              <li class="list-group-item"><%= @booking.campervan.title %></li>
+              <li class="list-group-item"><%= @booking.campervan.description %></li>
+              <li class="list-group-item">Postcode: <%= @booking.campervan.address %></li>
+              <li class="list-group-item">Price: £<%= @booking.campervan.price %> per day</li>
+          </ul>
+        <div class="card-body">
 
-  <h2>Hello <%= @booking.user.email %>!</h2>
-  <h3>Your booking is confirmed!</h3>
-    The details of your booking are as follows:
-    <br>
-    <%= @booking.start_date %>
-    <br>
-    <%= @booking.end_date %>
-    <br>
-    <div class="booking-show-p">You have booked:</div>
-    <%= @booking.campervan.title %>
-    <%= @booking.campervan.description %>
-    <%= @booking.campervan.address %>
-    <div class="booking-show-p">For £<%= @booking.campervan.price %> per day</div>
-    <img src="<%= cl_image_path @booking.campervan.photo.key %>">
-    <br>
-    <%= link_to "Back to Home", campervans_path %>
+          <%= link_to "Back to Campervans", campervans_path %>  :  <%= link_to "Back to Home", root_path %>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
 </div>
 
