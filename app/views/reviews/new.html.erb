@@ -1,2 +1,24 @@
 <h1>Reviews#new</h1>
 <p>Find me in app/views/reviews/new.html.erb</p>
+
+<div class="page-title">
+<h1>Add Review</h1>
+</div>
+
+<div class="form-container">
+  <div class="form-group">
+      <%= simple_form_for [@booking, @review] do |f| %>
+      <%= f.label :description, "Add Review" %>
+      <%= f.text_area :description %>
+  </div>
+<div class="form-group">
+      <%= f.label :rating,  "Add Rating" %>
+      <%= f.input :rating, as: :integer %>
+</div>
+
+  </div>
+    <div class=form-submit>
+        <%= f.button :submit %>
+         <% end %>
+    </div>
+</div>
