@@ -1,32 +1,36 @@
 <div class="card-trip">
   <img src="<%= cl_image_path @campervan.photo.key %>">
-    <%= link_to "", campervan_path(@campervan),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: 'far fa-trash-alt'%>
+  <%= link_to "", campervan_path(@campervan),
+  method: :delete,
+  data: { confirm: "Are you sure?" }, class: 'far fa-trash-alt'%>
   <div class="card-trip-infos">
     <div>
       <%=@campervan.title %>
       <p><%= @campervan.description %></p>
     </div>
-    <a class="btn btn-ghost" href="#">Add review</a>
-     <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost" %>
-         <h2 class="card-trip-pricing">Price per day:   £<%=@campervan.price  %></h2>
-  </div>
-    <div class="write-review">
-    <% @booking.reviews.each do |review| %>
-<ul>
-  <li>
-     <%= review.description %> Rating:  <%= review.rating %>
+    <!--     <a class="btn btn-ghost" href="#">Add review</a> -->
+    <% @bookings.each do |booking| %>
+      <%= link_to "add_review", new_booking_review_path(booking), class: "btn btn-ghost" %>
     <% end %>
-  </li>
-</ul>
+
+    <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost" %>
+    <h2 class="card-trip-pricing">Price per day:   £<%=@campervan.price  %></h2>
   </div>
-  </div>
-  <div class="booking-form">
-    <%= simple_form_for [@campervan, @booking] do |f| %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.button :submit, "Book Now"  %>
+  <div class="write-review">
+    <ul>
+      <% @bookings.map(&:reviews).flatten.each do |review| %>
+      <li>
+       <%= review.description %> Rating:  <%= review.rating %>
+      </li>
     <% end %>
-  </div>
+   </ul>
+ </div>
+</div>
+<div class="booking-form">
+  <%= simple_form_for [@campervan, @booking] do |f| %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date, as: :date %>
+  <%= f.button :submit, "Book Now"  %>
+  <% end %>
+</div>
 </div>
