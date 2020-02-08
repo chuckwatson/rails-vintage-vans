@@ -1,28 +1,30 @@
-<div class="page-title">
-  <h1>Pick a ride</h1>
-</div>
+<body>
+  <div class="container">
+  <div class="page-title">
+    <h1>Choose your ride...</h1>
+  </div>
 
-
-<div class="flex-container">
-  <div class="row">
-     <% @campervans.each do |campervan| %>
-       <%= link_to campervan_path(campervan), class: "text-decoration: none" do %>
-<!-- <div class ="link-card"> -->
-        <div class="col-md-4" style="margin-bottom:10px" "margin-left:10px" "margin-right:10px";>
+  <div class="card-campervan">
+  <% @campervans.each do |campervan| %>
+    <div class="single-card" style="margin-bottom:10px" "margin-left:10px" "margin-right:10px";>
+      <%= link_to campervan_path(campervan), class: "campervan-link" do %>
+        <div class ="link-card">
           <img src="<%= cl_image_path campervan.photo.key if campervan.photo.attached? %>" alt="">
-            <h4 class="card-title"><%= campervan.title%></h4>
-              <p class="card-description"><%= campervan.description %></p>
-                <p class="card-details"><%= campervan.price %></p>
-
-       <% end %>
         </div>
-      <% end %>
-   </div>
+        <div class="campervan-info">
+          <h4 class="card-title"><%= campervan.title %></i></h4>
+          <p class="card-description"><%= campervan.description %></p>
+        </div>
+        <h3 class="card-details">£<%= campervan.price %></h3>
+     <% end %>
+    </div>
+  <% end %>
+  </div>
+</div>
+</body>
 
- </div>
 
-<!--
-<main>
+<!-- <main>
   <section class="cards">
   <div class="card">
     <div class="card__image-container">
@@ -37,7 +39,7 @@
     </div>
   </div>
 </section>
-</main> -->
+</main>  -->
 
 
 

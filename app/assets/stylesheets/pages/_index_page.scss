@@ -1,51 +1,91 @@
+body {
+  background-color: #07212F;
+  background-size: cover;
+  background-position: center;
+}
+.campervan-link {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-campervan {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 18px;
+}
+
 .page-title h1 {
-  text-align: center;
-  font-family: 'Bree Serif', serif;
-  color: black;
+  text-align: left;
+  padding-top: 70px;
+  font-family: 'Zilla Slab', sans-serif;
+  color: white;
+}
+
+.single-card {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 18px;
+  position: relative;
+  padding: 16px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+
+  h4, p, h3 {
+    text-decoration: none;
+  }
+
+  h4 {
+    margin: 0px;
+    font-family: 'Raleway', serif;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 10px 0px;
+    color: #707070;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  h3 {
+    margin: 0px;
+    padding-left: 16px;
+    position: absolute;
+    bottom: 44px;
+    right: 16px;
+
+  }
+}
+
+.link-card {
+  height: 300px;
+  width: 100%;
+
+  img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.campervan-info {
+  display: flex;
+  padding: 16px;
+  // align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 80%;
 }
 
 .card-description {
   font-family: 'Bree Serif', serif;
   color: black;
-}
-
-.card-details p {
-  color: black;
-
-}
-
-
-// .cards-flex {
-//   display: flex;
-//   justify-content: space-between;
-//   flex-direction: column;
-
-// }
-.flex-container {
-  display: grid;
-  text-decoration: none;
-
-  // justify-content: space-between;
-}
-
-.col-md-4 {
-  border: 1px solid #E5E7E9;
-  height: 400px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-  text-decoration: none;
-  // padding: 5px;
-  // margin-left: 2px;
-
-  img {
-    width: 100%;
-    height: 300px;
-  }
-
-}
-
-.grid {
-  display: grid;
-  grid-auto-rows: 150px;
+  font-size: 14px;
 }
 
 .card-title {
@@ -54,92 +94,7 @@
 }
 
 
-.row {
-  text-decoration: none;
-}
-// .cards {
-//   width: 200px;
-//   height: 300px;
+// .row {
+//   text-decoration: none;
 // }
 
-
-// * {
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0;
-// }
-
-// main {
-//   display: grid;
-//   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-//   grid-gap: 40px;
-//   padding: 60px 0;
-// }
-
-// .text--medium {
-//  font-family: 'Bree Serif', serif;
-//   color: black;
-//   font-size: 16px;
-//   line-height: 20px;
-//   font-weight: 400;
-//   line-height: 20px;
-
-
-// }
-
-// .cards {
-// grid-column: 2 / span 12;
-// display: grid;
-// grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-// grid-gap: 40px;
-// }
-
-// .card {
-//   grid-column-end: span 4;
-//   display: flex;
-//   flex-direction: column;
-//   cursor: pointer;
-
-// }
-
-// .card__image-container {
-//   width: 100%;
-//   padding-top: 56.25%;
-//   overflow: hidden;
-//   position: relative;
-
-// }
-
-// .card:hover {
-//   transform: translateY(-7px);
-// }
-
-// .card__image-container {
-//   width: 100%;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%)
-// }
-
-// .card__content {
-//   padding: 20px;
-
-// }
-
-// .card__title {
-//   margin-bottom: 20px;
-// }
-
-// .card__info {
-//   display: flex;
-//   align-self: end;
-//   align-items: center;
-// }
-
-// .card__price {
-//   margin-left: auto;
-//   padding: 5px 20px;
-//   background-color: #303032;
-
-// }

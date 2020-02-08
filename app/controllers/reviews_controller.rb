@@ -25,5 +25,4 @@ class ReviewsController < ApplicationController
   def set_review
     @booking = Booking.find(params[:booking_id])
   end
-
 end
