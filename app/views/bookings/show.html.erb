@@ -1,0 +1,19 @@
+<div class="container">
+
+<h2>Hello <%= @booking.user.email %>!</h2>
+<h3>Your booking is confirmed!</h3>
+The details of your booking are as follows:
+<br>
+<%= @booking.start_date %>
+<br>
+<%= @booking.end_date %>
+<br>
+<h3>You have booked:</h3>
+<%= @booking.campervan.title %>
+<%= @booking.campervan.description %>
+<%= @booking.campervan.address %>
+<%= £ @booking.campervan.price %>
+<br>
+<%= link_to "Back to Home", campervans_path %>
+</div>
+
