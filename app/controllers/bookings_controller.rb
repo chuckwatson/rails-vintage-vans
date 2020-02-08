@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.campervan = @campervan
     @booking.user = current_user
     if @booking.save
-      redirect_to campervans_path
+      redirect_to campervan_booking_path(@campervan, @booking)
     else
       render 'campervans/show'
     end

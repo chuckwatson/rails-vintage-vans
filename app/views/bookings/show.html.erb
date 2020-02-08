@@ -8,11 +8,12 @@ The details of your booking are as follows:
 <br>
 <%= @booking.end_date %>
 <br>
-<h3>You have booked:</h3>
+<div class="booking-show-p">You have booked:</div>
 <%= @booking.campervan.title %>
 <%= @booking.campervan.description %>
 <%= @booking.campervan.address %>
-<%= £ @booking.campervan.price %>
+<div class="booking-show-p">For £<%= @booking.campervan.price %> per day</div>
+
 <br>
 <%= link_to "Back to Home", campervans_path %>
 </div>
