@@ -3,11 +3,12 @@
   <h3 align="center">Your booking is confirmed!</h3>
   <div class="show-flex" align="center">
     <div class="card mb-3" align="center" style="width: 35rem;">
-      <div class="card-body" >
-        Congratulations - you have booked: <strong><%= @booking.campervan.title %>!</strong>
+      <div class="card-body">
+        <div class="test">
+        <h4>Congratulations - you have booked: <strong><%= @booking.campervan.title %>!</strong></h4>
         <br>
           <div class="card-img-top">
-            <%= cl_image_tag @booking.campervan.photo.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag @booking.campervan.photo.key, height: 300, width: 400, crop: :fill, radius: 10 %>
           </div>
           <br>
           <ul class="list-group list-group-flush">
