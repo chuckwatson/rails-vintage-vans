@@ -1,12 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  background-color: #07212F !important;
+  color: white;
   width: 100%;
   box-shadow: none;
   position: fixed;
   z-index: 999;
   a {
-    color: white !important;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
   }
@@ -20,6 +20,11 @@
   width: 40px;
 }
 
-.navbar-item {
-  color: white;
+// .navbar-item {
+//   color: white;
+// }
+
+
+.dropdown-item {
+  color: black !important;
 }

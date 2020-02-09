@@ -1,12 +1,11 @@
 // Specific CSS for your home-page
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
   width: 100%;
   box-shadow: none;
   position: fixed;
   z-index: 999;
   a {
-    color: white;
+    color: white !important;
   }
 }
