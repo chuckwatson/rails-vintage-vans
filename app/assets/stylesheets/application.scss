@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import 'datetime_picker_input';
+@import "pickadate/default";
+@import "pickadate/default.date";
+@import "pickadate/default.time";

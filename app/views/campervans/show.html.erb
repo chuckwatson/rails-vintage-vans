@@ -1,11 +1,9 @@
 <div class="card-trip">
+
   <img src="<%= cl_image_path @campervan.photo.key %>">
-  <%= link_to "", campervan_path(@campervan),
-  method: :delete,
-  data: { confirm: "Are you sure?" }, class: 'far fa-trash-alt'%>
+<h1><%=@campervan.title %></h1>
   <div class="card-trip-infos">
     <div>
-      <%=@campervan.title %>
       <p><%= @campervan.description %></p>
     </div>
     <!--     <a class="btn btn-ghost" href="#">Add review</a> -->
@@ -20,15 +18,19 @@
     <% end %>
 
     <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost" %>
+     <%= link_to "", campervan_path(@campervan),
+  method: :delete,
+  data: { confirm: "Are you sure?" }, class: 'far fa-trash-alt'%>
     <h2 class="card-trip-pricing">Price per day:   £<%=@campervan.price  %></h2>
   </div>
 
 </div>
 <div class="booking-form">
   <%= simple_form_for [@campervan, @booking] do |f| %>
-  <%= f.input :start_date, as: :date %>
-  <%= f.input :end_date, as: :date %>
+  <%= f.input :start_date, as: :string, input_html: {type: :date, style: 'width: 200px'}%>
+  <%= f.input :end_date, as: :string, input_html: {type: :date, style:'width: 200px'}%>
   <%= f.button :submit, "Book Now"  %>
   <% end %>
 </div>
 </div>
+
