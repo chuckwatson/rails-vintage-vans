@@ -1,5 +1,3 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
 
 <div class="page-title">
 <h1>Add Review</h1>
@@ -7,7 +5,7 @@
 
 <div class="form-container">
   <div class="form-group">
-      <%= simple_form_for [@booking, @review] do |f| %>
+      <%= simple_form_for [@campervan, @review] do |f| %>
       <%= f.label :description, "Add Review" %>
       <%= f.text_area :description %>
   </div>
