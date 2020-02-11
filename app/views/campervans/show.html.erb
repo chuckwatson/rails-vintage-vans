@@ -2,20 +2,11 @@
 <div class="card-trip">
   <div class="card-trip-info">
     <h1><%=@campervan.title %></h1>
-    <h4><%= @campervan.description %></p>
-    <h4 class="card-trip-pricing">£<%=@campervan.price  %></h2>
+    <p><%= @campervan.description %></p>
+    <h4 class="card-trip-pricing">£<%=@campervan.price  %></h4>
     <div class="user-only-buttons">
 <!--     CAN WE KEEP THIS BUTTON HERE PERMANENTLY AND DISPLAY REVIEWS IF THEY EXIST ALWAYS? -->
-      <div class="review-box">
-        <h2>Reviews</h2>
-       <ul>
-       <% @campervan.reviews.each do | review |%>
-         <li>
-         <%= review.description%> <%= review.rating %>
-         </li>
-          <% end %>
-       </ul>
-      </div>
+      <%= link_to "Add Review", new_campervan_review_path(@campervan), class: "btn btn-ghost edit-booking-btn" %>
       <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost edit-booking-btn" %>
       <%= link_to "Delete Van", campervan_path(@campervan),
         method: :delete,
@@ -23,16 +14,36 @@
     </div>
   </div>
 
-  <div class="booking-form">
-    <p>Make a booking</p>
-    <div class="simple_form_booking_box">
-      <%= simple_form_for [@campervan, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, input_html: {type: :date, style: 'width: 200px'}%>
-      <%= f.input :end_date, as: :string, input_html: {type: :date, style:'width: 200px'}%>
-      <%= f.button :submit, "Book Now"  %>
+  <div class="booking-review-container">
+    <div class="booking-form">
+      <h4>Make a booking</h4>
+        <%= simple_form_for [@campervan, @booking] do |f| %>
+      <div class="simple_form_booking_box">
+          <%= f.input :start_date, as: :string, input_html: {type: :date, id: 'start-date', style: 'width: 200px'}%>
+<!--           <i class="fas fa-arrow-right"></i> -->
+          <%= f.input :end_date, as: :string, input_html: {type: :date, id: 'end-date', style:'width: 200px'}%>
+      </div>
+        <%= f.button :submit, "Book Now"  %>
       <% end %>
-  </div>
-        <%= link_to "add_review", new_campervan_review_path(@campervan.id), class: "btn btn-ghost" %>
+    </div>
+
+
+
+    <div class="review-box">
+      <h4>Reviews</h4>
+      <ul>
+        <% if @campervan.reviews.any? do |review| %>
+          <% @campervan.reviews.each do |review| %>
+            <li><p><%= review.rating %> <i class="fas fa-star"></i><br><%= review.description %><p></li>
+          <% end %>
+        <% end %>
+        <% else %>
+          <li><p>No reviews yet.</p></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
+
+
 
