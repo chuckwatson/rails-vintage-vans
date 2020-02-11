@@ -1,8 +1,22 @@
-<body>
-  <div class="container">
   <div class="page-title">
     <h1>Choose your ride...</h1>
   </div>
+<div class="container">
+  <div
+  id="map"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+
+  <div
+  id="map"
+  style="width: 100%;
+  height: 100px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+>
+</div>
 
   <div class="card-campervan">
   <% @campervans.each do |campervan| %>
@@ -21,25 +35,6 @@
   <% end %>
   </div>
 </div>
-</body>
-
-
-<!-- <main>
-  <section class="cards">
-  <div class="card">
-    <div class="card__image-container">
-      <img src="" alt="">
-    </div>
-    <div class="card__content">
-      <p class="text--medium"></p>
-      <p class="card__price text--medium"></p>
-      <div class="card__info">
-        <p class="text--medium"></p>
-      </div>
-    </div>
-  </div>
-</section>
-</main>  -->
 
 
 
