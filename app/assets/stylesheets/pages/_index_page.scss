@@ -1,7 +1,7 @@
 
 
 body {
-  background-color: #07212F;
+  background-color: white;
   background-size: cover;
   background-position: center;
 }
@@ -11,9 +11,16 @@ body {
 }
 
 .container {
+  display: flex;
   width: 100%;
   margin: 0 auto;
   padding: 0px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 20px;
 }
 
 
@@ -36,11 +43,12 @@ body {
   }
 }
 
+
 .page-title h1 {
   text-align: left;
   padding-top: 70px;
   font-family: 'Zilla Slab', sans-serif;
-  color: white;
+  color: black;
 }
 
 .single-card {
@@ -49,7 +57,7 @@ body {
   margin-top: 18px;
   position: relative;
   padding: 16px;
-  // width: 400px;
+
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
