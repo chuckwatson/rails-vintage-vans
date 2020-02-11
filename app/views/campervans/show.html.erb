@@ -7,15 +7,14 @@
     <div class="user-only-buttons">
 <!--     CAN WE KEEP THIS BUTTON HERE PERMANENTLY AND DISPLAY REVIEWS IF THEY EXIST ALWAYS? -->
       <div class="review-box">
-        <% @bookings.each do |booking| %>
-          <% if booking.reviews.any? %>
-            <% booking.reviews.each do |review| %>
-              <%= review.description %> Rating:  <%= review.rating %>
-            <% end %>
-          <% else %>
-            <%= link_to "Add Review", new_booking_review_path(booking), class: "btn btn-ghost" %>
+        <h2>Reviews</h2>
+       <ul>
+       <% @campervan.reviews.each do | review |%>
+         <li>
+         <%= review.description%> <%= review.rating %>
+         </li>
           <% end %>
-        <% end %>
+       </ul>
       </div>
       <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost edit-booking-btn" %>
       <%= link_to "Delete Van", campervan_path(@campervan),
@@ -23,8 +22,7 @@
         data: { confirm: "Are you sure?" }, class: 'btn btn-ghost'%>
     </div>
   </div>
-  <!--     <a class="btn btn-ghost" href="#">Add review</a> -->
-  <!-- MAKE WIDER AND HAVE DATES ON A ROW -->
+
   <div class="booking-form">
     <p>Make a booking</p>
     <div class="simple_form_booking_box">
@@ -35,16 +33,6 @@
       <% end %>
   </div>
         <%= link_to "add_review", new_campervan_review_path(@campervan.id), class: "btn btn-ghost" %>
-
-<h2>Reviews</h2>
-       <ul>
-       <% @campervan.reviews.each do | review |%>
-         <li>
-         <%= review.description%> <%= review.rating %>
-         </li>
-          <% end %>
-       </ul>
-
   </div>
 </div>
 
