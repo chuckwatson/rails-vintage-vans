@@ -1,3 +1,5 @@
+
+
 body {
   background-color: #07212F;
   background-size: cover;
@@ -14,10 +16,24 @@ body {
   padding: 0px;
 }
 
+
 .card-campervan {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  flex-grow: 1;
+}
+
+@media(max-width: 992px) {
+  .card-campervan{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-campervan{
+    grid-template-columns: 1fr;
+  }
 }
 
 .page-title h1 {
@@ -33,7 +49,7 @@ body {
   margin-top: 18px;
   position: relative;
   padding: 16px;
-  width: 400px;
+  // width: 400px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +88,7 @@ body {
   img {
     height: 300px;
     width: 100%;
+    object-fit: contain
   }
 }
 
