@@ -34,18 +34,16 @@
       <%= f.button :submit, "Book Now"  %>
       <% end %>
   </div>
-  <div class="display-of-reviews">
-    <% @bookings.each do |booking| %>
-      <% if booking.reviews.any? %>
-        <% booking.reviews.each do |review| %>
-          <h4>Rating:  <%= review.rating %></h4>
-          <p><%= review.description %></p>
-        <% end %>
-          <% else %>
-            <p>No reviews yet.</p>
+        <%= link_to "add_review", new_campervan_review_path(@campervan.id), class: "btn btn-ghost" %>
+
+<h2>Reviews</h2>
+       <ul>
+       <% @campervan.reviews.each do | review |%>
+         <li>
+         <%= review.description%> <%= review.rating %>
+         </li>
           <% end %>
-        <% end %>
-      </div>
+       </ul>
 
   </div>
 </div>

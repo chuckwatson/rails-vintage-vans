@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :campervans do
     resources :bookings, only: [ :new, :create, :show ]
   end
-  resources :bookings do
-    resources :reviews, only: [ :new, :create ]
+  resources :campervans do
+    resources :reviews, only: [:new, :create]
   end
 end
 
