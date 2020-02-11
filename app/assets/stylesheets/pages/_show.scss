@@ -1,49 +1,68 @@
+#campervan-img {
+  height: 500px;
+  width: 100%;
+}
+
 .card-trip {
+  padding: 30px 50px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
   h1 {
     color: black;
     font-family: 'Zilla Slab', sans-serif;
+    text-transform: uppercase;
 
   }
   p {
     color: black;
+    font-family: 'Raleway', sans-serif;
   }
 }
 
-.card-trip > img {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
-}
-
-
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
+.card-trip .card-trip-info {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
   position: relative;
+  padding-bottom: 30px;
+  h1 {
+    font-size: 50px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .user-only-buttons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+
+    .edit-booking-btn {
+    margin: 0px 14px;
+    }
+  }
 }
 
-.card-trip-infos h2 {
- margin-right: 50px;
+.booking-form {
+  padding: 20px 24px;
+  width: 60%;
+  background-color: white;
+  margin: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rbg(228, 228, 228);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
 }
+
+
 // .card-trip-infos .card-trip-user {
 //   position: absolute;
 //   right: 16px;
@@ -62,10 +81,6 @@
 
 .btn-ghost:hover {
   opacity: 1;
-}
-
-.card-trip-pricing h2 {
-margin-right: 50px;
 }
 
 //star rating
