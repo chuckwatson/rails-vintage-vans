@@ -2,7 +2,14 @@ class CampervansController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @campervans = Campervan.all
+    @campervans = Campervan.geocoded
+
+    @markers = @campervans.map do |campervan|
+      {
+        lat: campervan.latitude,
+        lng: campervan.longitude
+      }
+    end
   end
 
   def new
