@@ -7,15 +7,17 @@
       <p><%= @campervan.description %></p>
     </div>
     <!--     <a class="btn btn-ghost" href="#">Add review</a> -->
-    <% @bookings.each do |booking| %>
-      <% if booking.reviews.any? %>
-        <% booking.reviews.each do |review| %>
-          <%= review.description %> Rating:  <%= review.rating %>
-        <% end %>
-      <% else %>
-        <%= link_to "add_review", new_booking_review_path(booking), class: "btn btn-ghost" %>
-      <% end %>
-    <% end %>
+        <%= link_to "add_review", new_campervan_review_path(@campervan.id), class: "btn btn-ghost" %>
+
+<h2>Reviews</h2>
+       <ul>
+       <% @campervan.reviews.each do | review |%>
+         <li>
+         <%= review.description%> <%= review.rating %>
+         </li>
+          <% end %>
+       </ul>
+
 
     <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost" %>
      <%= link_to "", campervan_path(@campervan),
