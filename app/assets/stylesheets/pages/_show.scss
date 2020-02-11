@@ -17,6 +17,7 @@
   p {
     color: black;
     font-family: 'Raleway', sans-serif;
+    font-size: 14px;
   }
 }
 
@@ -25,12 +26,13 @@
   flex-direction: column;
   position: relative;
   padding-bottom: 30px;
+  margin-bottom: 35px;
+  border-bottom: 0.5px solid #C0C0C0;
   h1 {
     font-size: 50px;
   }
-
   h4 {
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Raleway', sans-serif;
   }
 
@@ -39,27 +41,66 @@
   flex-direction: row;
   position: absolute;
   top: 25px;
-  right: 50px;
+  right: 30px;
 
     .edit-booking-btn {
-    margin: 0px 14px;
+    margin-right: 14px;
     }
   }
 }
 
-.booking-form {
-  padding: 20px 24px;
-  width: 60%;
-  background-color: white;
-  margin: 0px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rbg(228, 228, 228);
-  border-radius: 5px;
+.booking-review-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  // justify-content: space-between;
+  .booking-form {
+    padding: 20px 24px;
+    width: 60%;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    .simple_form_booking_box {
+      display: flex;
+      justify-content: space-between;
+      width: 320px;
+      #start-date, #end-date {
+        background-color: #F5F5F5;
+      }
+    }
+  }
+  .review-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px;
+    width: 60%;
+    background-color: white;
+    margin-right: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-trip {
+  .review-box {
+  padding-right: 30px;
+  display: flex;
+  justify-content: left;
+  width: 25%;
+  } h4 {
+    font-family: 'Raleway', sans-serif;
+  }
 }
 
 
@@ -72,7 +113,7 @@
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
-  padding: 8px 24px;
+  padding: 8px 24px !important;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
