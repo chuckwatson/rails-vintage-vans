@@ -1,11 +1,12 @@
-<img id="campervan-img" src="<%= cl_image_path @campervan.photo.key %>">
+<div class="showpage-image" style="width:100vw; height: 100vh; background-image: url('<%= cl_image_path @campervan.photo.key %>'); background-size: cover; background-position: center;" >
+</div>
+
 <div class="card-trip">
   <div class="card-trip-info">
     <h1><%=@campervan.title %></h1>
     <p><%= @campervan.description %></p>
     <h4 class="card-trip-pricing">£<%=@campervan.price  %></h4>
     <div class="user-only-buttons">
-<!--     CAN WE KEEP THIS BUTTON HERE PERMANENTLY AND DISPLAY REVIEWS IF THEY EXIST ALWAYS? -->
       <%= link_to "Add Review", new_campervan_review_path(@campervan), class: "btn btn-ghost edit-booking-btn" %>
       <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost edit-booking-btn" %>
       <%= link_to "Delete Van", campervan_path(@campervan),
@@ -26,9 +27,6 @@
         <%= f.button :submit, "Book Now"  %>
       <% end %>
     </div>
-
-
-
     <div class="review-box">
       <h4>Reviews</h4>
       <ul>
