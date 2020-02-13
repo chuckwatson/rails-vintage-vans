@@ -10,15 +10,4 @@ class Campervan < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  include AlgoliaSearch
-  algoliasearch do
-    attributes :title, :description, :is_public => true
-  end
-  after_save :load_algolia
-  private
-  def load_algolia
-    index = Algolia::index.new('VINTAGE-VANS')
-    index.add_object(self)
-  end
-
 end
