@@ -34,7 +34,7 @@
       <ul>
         <% if @campervan.reviews.any? do |review| %>
           <% @campervan.reviews.each do |review| %>
-            <li><p><%= review.user.first_name %><br><%= review.description %><%= review.rating %> <i class="fas fa-star"></i><p></li>
+            <li><p><%= review.user.first_name %><br><%= review.description %>   <%= review.rating %> <i class="fas fa-star"></i><p></li>
           <% end %>
         <% end %>
         <% else %>
