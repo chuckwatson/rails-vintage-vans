@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     @review.campervan = @campervan
     @review.user = current_user
     if @review.save
-      redirect_to campervans_path
+      redirect_to campervan_path(@campervan)
     else
       render "booking_reviews"
     end
@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:description, :rating)
+    params.require(:review).permit(:description, :rating, :first_name)
   end
     #  def set_review
     #   @review = Review.find(params[:id])
