@@ -10,6 +10,14 @@ class CampervansController < ApplicationController
         lng: campervan.longitude
       }
     end
+
+    if params[:query].present?
+      @campervans = Campervan.where(title: params[:query])
+    elsif @campervans == Campervan.where(description: params[:query])
+    else
+      @campervans = Campervan.all
+    end
+
   end
 
   def new

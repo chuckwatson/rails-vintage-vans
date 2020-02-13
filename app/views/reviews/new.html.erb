@@ -1,22 +1,24 @@
-
-<div class="page-title">
-<h1>Add Review</h1>
-</div>
-
-<div class="form-container">
-  <div class="form-group">
-      <%= simple_form_for [@campervan, @review] do |f| %>
-      <%= f.label :description, "Add Review" %>
-      <%= f.text_area :description, input_html: { :style=> 'width: 350px' 'color: white'} %>
+<div class="container-show">
+  <div class="page-title">
+  <h1>Add Your Review</h1>
   </div>
-<div class="form-group">
-      <%= f.label :rating,  "Add Rating" %>
-      <%= f.input :rating, as: :integer, input_html: { min: '0', max: '5' } %>
-</div>
 
-  </div>
-    <div class=form-submit>
-        <%= f.button :submit %>
-         <% end %>
+  <div class="form-container">
+    <div class="form-group">
+        <%= simple_form_for [@campervan, @review] do |f| %>
+        <%= f.label :description, "Add Review" %>
+        <%= f.text_area :description, input_html: { :style=> 'width: 350px' 'color: white'} %>
     </div>
+  <div class="form-group">
+        <%= f.label :rating,  "Add Rating" %>
+        <%= f.input :rating, as: :integer, input_html: { min: '0', max: '5' } %>
+  </div>
+
+    </div>
+      <div class=form-submit>
+          <%= f.button :submit %>
+           <% end %>
+      </div>
+  </div>
 </div>
+
