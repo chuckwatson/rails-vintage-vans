@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
   # resources :users, only: [ :new, :create] do
 
   #  get 'login', to: 'sessions#new'
@@ -21,7 +22,11 @@ end
     resources :reviews, only: [:new, :create]
   end
 
-   delete '/campervans/:id' => 'campervan#destroy'
+   # delete '/campervans/:id' => 'campervan#destroy'
+
+   resources :users do
+    resources :bookings, only: [ :index, :destroy ]
+  end
 
 end
 

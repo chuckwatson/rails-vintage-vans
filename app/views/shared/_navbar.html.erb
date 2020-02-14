@@ -12,9 +12,11 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <li class="nav-item">
-           <p>Welcome Back    <%= current_user.first_name %></p>
+
         </li>
+         <p style="color: white">Welcome back    <%= current_user.first_name %>!</p>
           <%= link_to "Home", campervans_path, class: "nav-link" %>
+          <%= link_to "My Bookings", user_bookings_path(current_user), class: "nav-link" %>
         </li>
 
         <li class="nav-item">
