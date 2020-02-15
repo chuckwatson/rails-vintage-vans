@@ -28,7 +28,7 @@
 <div class="container">
   <div
   id="map"
-  style="width: 100%;
+  style="width: 2000px;
   height: 1000px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -39,11 +39,11 @@
   <% @campervans.each do |campervan| %>
     <div class="single-card" style="margin-bottom:10px" "margin-left:10px" "margin-right:10px";>
       <%= link_to campervan_path(campervan), class: "campervan-link" do %>
+          <h4 class="card-title"><%= campervan.title %></i></h4>
         <div class ="link-card">
           <img src="<%= cl_image_path campervan.photo.key if campervan.photo.attached? %>" alt="">
         </div>
         <div class="campervan-info">
-          <h4 class="card-title"><%= campervan.title %></i></h4>
           <p class="card-description"><%= campervan.description %></p>
         </div>
         <p>Price per day</p>

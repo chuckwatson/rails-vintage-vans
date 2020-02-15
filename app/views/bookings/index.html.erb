@@ -2,38 +2,35 @@
 <br>
 <br>
 <br>
-<h1>My Bookings</h1>
+<div class="title-booking-page">
+  <h1>My Bookings</h1>
+</div>
 <div class="container">
 
   <div class="card-campervan">
-  <% @bookings.each do |booking| %>
-    <div class="single-card" style="margin-bottom:10px" "margin-left:10px" "margin-right:10px";>
-        <div class ="link-card">
-          <h4 class="card-title"><%= booking.campervan.title %></i></h4>
+    <% @bookings.each do |booking| %>
+      <div class="single-card" style="margin-bottom:5vh" "margin-left:10vh" "margin-right:10vh";>
+        <div class="top-line-booking-card">
+          <h2 class="card-title"><%= booking.campervan.title %></i></h2>
+        </div>
+        <div class ="link-card-user-booking">
           <img src="<%= cl_image_path booking.campervan.photo.key if booking.campervan.photo.attached? %>" alt="">
         </div>
         <div class="campervan-info">
-        </div>
           <div class="booking-dates">
             <p><strong>Booking Dates</strong></p>
-             <p> From:<%= booking.start_date.strftime("%d %m %Y") %> </p>
-            <p> Until:<%= booking.end_date.strftime("%d %m %Y") %></p>
+            <p><%= booking.start_date.strftime("%d %m %Y") %> - <%= booking.end_date.strftime("%d %m %Y") %></p>
           </div>
-        <div class="card-price">
-           <p>Price per day</p>
-             <h3 class="card-details">£<%= booking.campervan.price %></h3>
+          <div class="bottom-line-booking">
+            <%= link_to "Cancel Booking", user_booking_path(current_user.id, booking),
+            method: :delete,
+            data: { confirm: "Cancel/Delete Booking?" }, class: 'btn btn-ghost-booking cancel-btn'%>
+            <% if booking.campervan.user.avatar.attached? %>
+              <%= cl_image_tag booking.campervan.user.avatar.key, class: "avatar avatar-booking-page" %>
+            <% end %>
+          </div>
         </div>
-        <%= link_to "Delete Van", user_booking_path(current_user.id, booking),
-        method: :delete,
-        data: { confirm: "Cancel/Delete Booking?" }, class: 'btn btn-ghost-booking'%>
-           <% if booking.campervan.user.avatar.attached? %>
-              <%= cl_image_tag booking.campervan.user.avatar.key, class: "avatar" %>
-
-
-           <% end %>
-        </div>
-
-       <% end %>
-
+      </div>
+    <% end %>
   </div>
 </div>
