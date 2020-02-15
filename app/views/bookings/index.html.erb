@@ -1,22 +1,20 @@
-
 <br>
 <br>
 <br>
 <div class="title-booking-page">
   <h1>My Bookings</h1>
 </div>
-<div class="container">
-
-  <div class="card-campervan">
+<div class="container-booking-page">
+  <div class="card-campervan-booking-page">
     <% @bookings.each do |booking| %>
-      <div class="single-card" style="margin-bottom:5vh" "margin-left:10vh" "margin-right:10vh";>
+      <div class="single-card-booking-page" style="margin-bottom:5vh" "margin-left:10vh" "margin-right:10vh";>
         <div class="top-line-booking-card">
-          <h2 class="card-title"><%= booking.campervan.title %></i></h2>
+          <h2 class="card-title-booking-page"><%= booking.campervan.title %></i></h2>
         </div>
         <div class ="link-card-user-booking">
           <img src="<%= cl_image_path booking.campervan.photo.key if booking.campervan.photo.attached? %>" alt="">
         </div>
-        <div class="campervan-info">
+        <div class="campervan-info-booking-page">
           <div class="booking-dates">
             <p><strong>Booking Dates</strong></p>
             <p><%= booking.start_date.strftime("%d %m %Y") %> - <%= booking.end_date.strftime("%d %m %Y") %></p>

@@ -7,17 +7,18 @@ class CampervansController < ApplicationController
     @markers = @campervans.map do |campervan|
       {
         lat: campervan.latitude,
-        lng: campervan.longitude
+        lng: campervan.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { campervan: campervan })
       }
     end
 
     if params[:query].present?
-      @campervans = Campervan.where(title: params[:query])
-    elsif @campervans == Campervan.where(description: params[:query])
+      sql_query = "title ILIKE :query OR description ILIKE :query OR address ILIKE :query"
+      @campervans = Campervan.where(sql_query, query: "%#{params[:query]}%")
     else
       @campervans = Campervan.all
     end
-
+    # raise
   end
 
   def new

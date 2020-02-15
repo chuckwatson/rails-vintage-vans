@@ -1,4 +1,4 @@
-.container {
+.container-login {
   width: 100%;
   padding: 100px;
   margin: 20px, auto;
@@ -17,15 +17,6 @@
  color: white !important;
 }
 
-// .container-show {
-//   width: 100%;
-//   padding: 50px;
-//   margin: 50px, auto;
-//   justify-content: left;
-
-
-// }
-
 .container-show {
   border-radius: 10%;
   width: 800px;
@@ -40,18 +31,26 @@
   .container-show {
     width: 300px;
   }
-
-  // .search-bar {
-  //   width: 300px;
-  // }
 }
 
-// .search-bar {
-//   margin: 20px;
-//   width: 350px;
-//   position: relative;
-// }
+.forgot-password {
+  display: flex;
+  justify-content: space-between;
+}
 
+.search-border {
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  padding: 10px;
+  border-color: #07212F;
+  border-width: 1px;
+
+}
+
+.submit-tag {
+  color: #07212F;
+}
 
 // .email-optional {
 //   color: white;
