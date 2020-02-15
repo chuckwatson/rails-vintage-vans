@@ -38,6 +38,16 @@
   justify-content: space-between;
 }
 
+.search-border {
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  padding: 10px;
+  border-color: #07212F;
+  border-width: 1px;
+
+}
+
 
 // .email-optional {
 //   color: white;

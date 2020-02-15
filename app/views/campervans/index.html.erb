@@ -1,19 +1,29 @@
-  <div class="page-title">
-    <h1>Choose your ride...</h1>
-    <div class="float-right" style="margin-right:30px">
-     <%= form_tag campervans_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find Your Van"
-            %>
-              <br>
-          <%= submit_tag "Click to Search", class: "btn btn-primary" %>
-        <% end %>
-    </div>
-</div>
-<div class="container">
+<div class="page-title">
+  <h1>Choose your ride...</h1>
 
+    <div class="container">
+        <div class="search-border">
+          <div>
+            <%= form_tag campervans_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find your van..."
+              %>
+            </div>
+              &nbsp; &nbsp;
+              <div>
+                <%= submit_tag "Click to Search", class: "btn btn-primary" %>
+                <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+<div class="container">
   <div
   id="map"
   style="width: 100%;

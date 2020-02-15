@@ -12,12 +12,12 @@ class CampervansController < ApplicationController
     end
 
     if params[:query].present?
-      @campervans = Campervan.where(title: params[:query])
-    elsif @campervans == Campervan.where(description: params[:query])
+      sql_query = "title ILIKE :query OR description ILIKE :query OR address ILIKE :query"
+      @campervans = Campervan.where(sql_query, query: "%#{params[:query]}%")
     else
       @campervans = Campervan.all
     end
-
+    # raise
   end
 
   def new
