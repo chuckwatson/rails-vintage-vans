@@ -7,56 +7,45 @@ body {
   color: black !important;
   text-decoration: none !important;
 }
-
 h1 {
-  color: black !important;
+  color: black;
   font-family: 'Zilla Slab', serif;
   text-align: center;
 }
-
 .container {
   display: flex;
   width: 100%;
   margin: 0 auto;
   padding: 0px;
 }
-
 .mapboxgl-canvas {
   flex-grow: 10;
   padding-right: 20px;
   padding-top: 20px;
 }
-
 #map {
   flex-grow: 2;
   height: 100vh;
   position: sticky;
   top: 20px;
   border-radius: 5px;
-
 }
-
 .card-campervan {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   flex-grow: 1;
 }
-
 @media(max-width: 992px) {
   .card-campervan{
     grid-template-columns: 1fr 1fr;
   }
 }
-
-
 @media(max-width: 768px) {
   .card-campervan{
     grid-template-columns: 1fr;
   }
 }
-
-
 .page-title h1 {
   text-align: left;
   padding-top: 70px;
@@ -64,109 +53,62 @@ h1 {
   font-family: 'Zilla Slab', sans-serif;
   color: black;
 }
-
 .single-card {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 18px;
   position: relative;
-  padding: 20px;
+  padding: 16px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-  width: 30vw;
-
   h4, p, h3 {
     text-decoration: none;
-
   }
-
   h4 {
     margin: 0px;
     font-family: 'Raleway', serif;
     font-size: 18px;
   }
-
   p {
-    // margin: 10px 0px;
-    color: #080808;
+    margin: 10px 0px;
+    color: #707070;
     font-family: 'Raleway', sans-serif;
   }
-
   h3 {
     margin: 0px;
     padding-left: 16px;
     position: absolute;
     bottom: 44px;
     right: 16px;
-
   }
 }
-
-.link-card-user-booking {
-  position: relative;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  width: 28vw;
-  img {
-    height: 150px;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-    width: 100%;
-  }
-}
-
 .link-card {
   height: 150px;
   width: 100%;
-
   img {
     height: 150px;
     width: 100%;
-    object-fit: contain;
+    object-fit: contain
   }
 }
-
 .campervan-info {
   display: flex;
+  // padding: 16px;
   // align-items: flex-end;
-  // justify-content: space-between;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
 }
-
 .card-description {
   font-family: 'Raleway', serif;
   color: black;
   font-size: 14px;
 }
-
 .card-title {
   text-decoration: none;
   font-family: 'Zilla Slab', serif;
-  padding-top: 3vh;
 }
-
 .card-price {
-  display: flex;
-  justify-content: flex-end;
 }
-
-.bottom-line-booking {
-  display: flex;
-  justify-content: space-between;
-}
-
-.cancel-btn {
-  margin-top: 2vh;
-}
-
-.title-booking-page {
-  padding: 10vh 14vw;
-  text-transform: uppercase;
-}
-
-// .row {
-//   text-decoration: none;
-// }
