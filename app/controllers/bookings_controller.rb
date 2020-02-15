@@ -16,8 +16,19 @@ class BookingsController < ApplicationController
     end
   end
 
+ def index
+    @user = current_user
+    @bookings = @user.bookings
+end
+
   def show
     @booking = Booking.find(params[:id])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to user_bookings_path(current_user)
   end
 
   private

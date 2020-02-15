@@ -20,6 +20,8 @@ gem 'datetime_picker_input'
 gem 'pickadate-rails'
 gem 'geocoder'
 gem 'algoliasearch-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

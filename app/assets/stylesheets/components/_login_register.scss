@@ -17,6 +17,42 @@
  color: white !important;
 }
 
+// .container-show {
+//   width: 100%;
+//   padding: 50px;
+//   margin: 50px, auto;
+//   justify-content: left;
+
+
+// }
+
+.container-show {
+  border-radius: 10%;
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+/*  padding: 20px;
+  align-items: center;*/
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container-show {
+    width: 300px;
+  }
+
+  // .search-bar {
+  //   width: 300px;
+  // }
+}
+
+// .search-bar {
+//   margin: 20px;
+//   width: 350px;
+//   position: relative;
+// }
+
+
 // .email-optional {
 //   color: white;
 // }
