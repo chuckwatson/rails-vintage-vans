@@ -1,0 +1,96 @@
+body {
+  background-color: white;
+  background-size: cover;
+  // background-position: center;
+}
+h1 {
+  color: black important;
+  font-family: 'Zilla Slab', serif;
+  text-align: center;
+}
+.container-booking-page {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 0px 0px 2vw;
+}
+.card-campervan-booking-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  flex-grow: 1;
+}
+@media(max-width: 992px) {
+  .card-campervan-booking-page{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 768px) {
+  .card-campervan-booking-page {
+    grid-template-columns: 1fr;
+  }
+}
+// NOT SURE IF I NEED THIS
+// .page-title h1 {
+//   text-align: left;
+//   padding-top: 70px;
+//   padding-left: 60px;
+//   font-family: 'Zilla Slab', sans-serif;
+//   color: black;
+// }
+.single-card-booking-page {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 18px;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 30vw;
+  h4, p, h3 {
+    text-decoration: none;
+  }
+  p {
+    // margin: 10px 0px;
+    color: #080808;
+    font-family: 'Raleway', sans-serif;
+  }
+}
+.link-card-user-booking {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 28vw;
+  img {
+    height: 100%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.campervan-info-booking-page {
+  display: flex;
+  // align-items: flex-end;
+  // justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+.card-title-booking-page {
+  text-decoration: none;
+  font-family: 'Zilla Slab', serif;
+  padding-top: 3vh;
+}
+.bottom-line-booking {
+  display: flex;
+  justify-content: space-between;
+}
+.cancel-btn {
+  margin-top: 2vh;
+}
+.title-booking-page {
+  padding: 10vh 14vw;
+  text-transform: uppercase;
+}

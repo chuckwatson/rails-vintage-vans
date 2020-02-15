@@ -7,7 +7,8 @@ class CampervansController < ApplicationController
     @markers = @campervans.map do |campervan|
       {
         lat: campervan.latitude,
-        lng: campervan.longitude
+        lng: campervan.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { campervan: campervan })
       }
     end
 
