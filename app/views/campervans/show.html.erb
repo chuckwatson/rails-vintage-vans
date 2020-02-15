@@ -25,7 +25,6 @@
         <%= simple_form_for [@campervan, @booking] do |f| %>
       <div class="simple_form_booking_box">
           <%= f.input :start_date, as: :string, input_html: {type: :date, id: 'start-date', style: 'width: 200px'}%>
-<!--           <i class="fas fa-arrow-right"></i> -->
           <%= f.input :end_date, as: :string, input_html: {type: :date, id: 'end-date', style:'width: 200px'}%>
       </div>
         <%= f.button :submit, "Book Now"  %>

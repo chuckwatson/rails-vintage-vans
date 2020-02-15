@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_230028) do
+ActiveRecord::Schema.define(version: 2020_02_14_224405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,9 @@ ActiveRecord::Schema.define(version: 2020_02_11_230028) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "model"
+    t.string "year"
+    t.string "fuel_type"
     t.index ["user_id"], name: "index_campervans_on_user_id"
   end
 
