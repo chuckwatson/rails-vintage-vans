@@ -28,7 +28,7 @@
 <div class="container">
   <div
   id="map"
-  style="width: 2000px;
+  style="width: 1400px;
   height: 1000px;"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -46,8 +46,10 @@
         <div class="campervan-info">
           <p class="card-description"><%= campervan.description %></p>
         </div>
-        <p>Price per day</p>
-        <h3 class="card-details">£<%= campervan.price %></h3>
+        <div class="card-price">
+          <p>Price per day</p>
+          <h3 >£<%= campervan.price %></h3>
+        </div>
          <% if campervan.user.avatar.attached? %>
           <%= cl_image_tag campervan.user.avatar.key, class: "avatar" %>
         <% end %>
