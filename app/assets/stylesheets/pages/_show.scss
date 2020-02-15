@@ -1,23 +1,27 @@
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .booking-review-container {
-    grid-template-columns: 1fr;
-  }
-  .simple_form_booking_box {
-    grid-template-columns: none;
-  }
-}
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .booking-review-container {
+//     grid-template-columns: 1fr;
+//   }
+//   .simple_form_booking_box {
+//     grid-template-columns: none;
+//   }
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .booking-review-container {
-    grid-template-columns: 1fr 1fr;
-    // grid-gap: 50px;
-  }
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .booking-review-container {
+//     grid-template-columns: 1fr 1fr;
+//     // grid-gap: 50px;
+//   }
+// }
+
+.title {
+  width: 50vw;
 }
 
 .card-trip {
-  padding: 30px 50px;
+  padding: 5vh 10vh;
   overflow: hidden;
   background: white;
 
@@ -38,8 +42,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 30px;
-  margin-bottom: 35px;
+  padding-bottom: 5vh;
+  margin-bottom: 5vh;
   border-bottom: 0.5px solid #C0C0C0;
   h1 {
     font-size: 50px;
@@ -48,13 +52,19 @@
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
   }
-
-  .user-only-buttons {
+// LEARN HOW TO USE FLEXBOX YAS
+.card-trip-info {
   display: flex;
+  .top-row {
+    // justify-content: space-between;
+    // padding-bottom: 5vh;
+    // display: inline-block;
+    // flex-direction: row;
+  }
+}
+  .user-only-buttons {
+  display: inline-block;
   flex-direction: row;
-  position: absolute;
-  top: 25px;
-  right: 30px;
 
     .edit-booking-btn {
     margin-right: 14px;
