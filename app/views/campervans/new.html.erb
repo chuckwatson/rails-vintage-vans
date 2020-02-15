@@ -1,44 +1,49 @@
-<div class="page-title">
-<h1>Add your camper</h1>
+<div class="banner">
+  <div class="banner-content text-center">
 </div>
 
-<div class="form-container">
-  <div class="form-group">
-      <%= simple_form_for @campervan do |f| %>
-      <%= f.label :title, "Title" %>
-      <%= f.text_field :title,:style=> 'width: 350px' %>
-  </div>
-<div class="form-group">
-      <%= f.label :description, "Description" %>
-      <%= f.text_area :description, :style=> 'width: 350px' %>
-</div>
-<div class="form-group">
-  <%= f.input :model, as: :string, :style=> 'width: 350px' %>
-</div>
-<div class="form-group">
-  <%= f.input :year, as: :string, :style=> 'width: 350px' %>
-</div>
-<div class="form-group">
-  <%= f.input :fuel_type, as: :string, :style=> 'width: 350px' %>
-</div>
-<div class="form-group">
-   <%= f.label :address, "Address" %>
-   <%= f.text_field :address,:style=> 'width: 350px' %>
-</div>
-<div class="form-group">
-  <%= f.input :price, as: :string %>
-</div>
-<div class="form-group">
-    <%= f.input :photo, as: :file %>
-  </div>
-    <div class=form-submit>
-        <%= f.button :submit %>
-         <% end %>
+  <div class="add-form-colour" align="left">
+    <h1 class="title-add">Add Your Van</h1>
+  <div class="form-container">
+    <div class="form-group" align="left">
+        <%= simple_form_for @campervan do |f| %>
+        <%= f.label :title, "Title" %>
+        <%= f.text_field :title,:style=> 'width: 350px' %>
     </div>
+  <div class="form-group" align="left">
+        <%= f.label :description, "Description" %>
+        <%= f.text_area :description, :style=> 'width: 350px' %>
+  </div>
+
+  <div class="add-van" align="left">
+    <div class="form-group">
+      <%= f.input :model, as: :string, style: "color:white" %>
+    </div>
+    <div class="form-group">
+      <%= f.input :year, as: :string, :style=> 'width: 350px' %>
+    </div>
+    <div class="form-group">
+      <%= f.input :fuel_type, as: :string, :style=> 'width: 350px' %>
+    </div>
+  </div>
+  <div class="form-group" align="left">
+     <%= f.label :address, "Address" %>
+     <%= f.text_field :address,:style=> 'width: 350px' %>
+  </div>
+  <div class="form-group" align="left">
+    <%= f.input :price, as: :string %>
+  </div>
+  <div class="form-group" align="left">
+      <%= f.input :photo, as: :file %>
+    </div>
+    <br>
+      <div class=form-submit align="left">
+          <%= f.button :submit %>
+           <% end %>
+      </div>
+  </div>
 </div>
 
 <br>
 
-<div style="text-align:center;">
-  <%= link_to "Home", campervans_path, class: "btn btn-flat" %>
-</div>
+
