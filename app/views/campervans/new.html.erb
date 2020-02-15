@@ -13,11 +13,19 @@
       <%= f.text_area :description, :style=> 'width: 350px' %>
 </div>
 <div class="form-group">
-   <%= f.label :address, "Post Code" %>
+  <%= f.input :model, as: :string, :style=> 'width: 350px' %>
+</div>
+<div class="form-group">
+  <%= f.input :year, as: :string, :style=> 'width: 350px' %>
+</div>
+<div class="form-group">
+  <%= f.input :fuel_type, as: :string, :style=> 'width: 350px' %>
+</div>
+<div class="form-group">
+   <%= f.label :address, "Address" %>
    <%= f.text_field :address,:style=> 'width: 350px' %>
 </div>
 <div class="form-group">
-  <%= f.label :price, "Price per day" %>
   <%= f.input :price, as: :string %>
 </div>
 <div class="form-group">

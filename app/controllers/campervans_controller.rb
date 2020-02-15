@@ -30,7 +30,7 @@ class CampervansController < ApplicationController
 
     @campervan.user = current_user
     if @campervan.save
-      redirect_to campervan_path(@campervan)
+      redirect_to campervans_path
     else
       render :new
     end
