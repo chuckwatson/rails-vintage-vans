@@ -70,11 +70,12 @@ h1 {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 18px;
   position: relative;
-  padding: 16px;
+  padding: 20px;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
+  width: 30vw;
 
   h4, p, h3 {
     text-decoration: none;
@@ -88,8 +89,8 @@ h1 {
   }
 
   p {
-    margin: 10px 0px;
-    color: #707070;
+    // margin: 10px 0px;
+    color: #080808;
     font-family: 'Raleway', sans-serif;
   }
 
@@ -103,6 +104,19 @@ h1 {
   }
 }
 
+.link-card-user-booking {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 28vw;
+  img {
+    height: 150px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    width: 100%;
+  }
+}
+
 .link-card {
   height: 150px;
   width: 100%;
@@ -110,7 +124,7 @@ h1 {
   img {
     height: 150px;
     width: 100%;
-    object-fit: contain
+    object-fit: contain;
   }
 }
 
@@ -118,7 +132,7 @@ h1 {
   display: flex;
   // padding: 16px;
   // align-items: flex-end;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-direction: column;
   width: 100%;
 }
@@ -132,12 +146,27 @@ h1 {
 .card-title {
   text-decoration: none;
   font-family: 'Zilla Slab', serif;
+  padding-top: 3vh;
 }
 
 .card-price {
-
+  display: flex;
+  justify-content: flex-end;
 }
 
+.bottom-line-booking {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn {
+  margin-top: 2vh;
+}
+
+.title-booking-page {
+  padding: 10vh 14vw;
+  text-transform: uppercase;
+}
 
 // .row {
 //   text-decoration: none;

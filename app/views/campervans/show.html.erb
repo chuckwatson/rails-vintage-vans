@@ -3,16 +3,20 @@
 
 <div class="card-trip">
   <div class="card-trip-info">
-    <h1><%=@campervan.title %></h1>
+    <div class="top-row">
+      <div class="title" style="display:inline-flex;">
+        <h1><%=@campervan.title %></h1>
+      </div>
+      <div class="user-only-buttons">
+        <%= link_to "Add Review", new_campervan_review_path(@campervan), class: "btn btn-ghost edit-booking-btn" %>
+        <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost edit-booking-btn" %>
+        <%= link_to "Delete Van", campervan_path(@campervan),
+          method: :delete,
+          data: { confirm: "Are you sure?" }, class: 'btn btn-ghost'%>
+      </div>
+    </div>
     <p><%= @campervan.description %></p>
     <h4 class="card-trip-pricing">£<%=@campervan.price  %></h4>
-    <div class="user-only-buttons">
-      <%= link_to "Add Review", new_campervan_review_path(@campervan), class: "btn btn-ghost edit-booking-btn" %>
-      <%= link_to "Edit", edit_campervan_path, class: "btn btn-ghost edit-booking-btn" %>
-      <%= link_to "Delete Van", campervan_path(@campervan),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: 'btn btn-ghost'%>
-    </div>
   </div>
 
   <div class="booking-review-container">
