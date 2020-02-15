@@ -8,33 +8,28 @@ body {
   color: black !important;
   text-decoration: none !important;
 }
-
 h1 {
   color: black;
   font-family: 'Zilla Slab', serif;
   text-align: center;
 }
-
 .container {
   display: flex;
   width: 100%;
   margin: 0 auto;
   padding: 0px;
 }
-
 .mapboxgl-canvas {
   flex-grow: 10;
   padding-right: 20px;
   padding-top: 20px;
 }
-
 #map {
   flex-grow: 2;
   height: 100vh;
   position: sticky;
   top: 20px;
   border-radius: 5px;
-
 }
 
 .card-campervan {
@@ -43,21 +38,17 @@ h1 {
   grid-gap: 20px;
   flex-grow: 1;
 }
-
 @media(max-width: 992px) {
   .card-campervan{
     grid-template-columns: 1fr 1fr;
   }
 }
 
-
 @media(max-width: 768px) {
   .card-campervan{
     grid-template-columns: 1fr;
   }
 }
-
-
 .page-title h1 {
   text-align: left;
   padding-top: 70px;
@@ -65,7 +56,6 @@ h1 {
   font-family: 'Zilla Slab', sans-serif;
   color: black;
 }
-
 .single-card {
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -76,45 +66,36 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-
   h4, p, h3 {
     text-decoration: none;
-
   }
-
   h4 {
     margin: 0px;
     font-family: 'Raleway', serif;
     font-size: 18px;
   }
-
   p {
     margin: 10px 0px;
     color: #707070;
     font-family: 'Raleway', sans-serif;
   }
-
   h3 {
     margin: 0px;
     padding-left: 16px;
     position: absolute;
     bottom: 44px;
     right: 16px;
-
   }
 }
-
 .link-card {
   height: 150px;
   width: 100%;
-
   img {
     height: 150px;
     width: 100%;
     object-fit: contain
   }
 }
-
 .campervan-info {
   display: flex;
   // padding: 16px;
@@ -123,23 +104,14 @@ h1 {
   flex-direction: column;
   width: 100%;
 }
-
 .card-description {
   font-family: 'Raleway', serif;
   color: black;
   font-size: 14px;
 }
-
 .card-title {
   text-decoration: none;
   font-family: 'Zilla Slab', serif;
 }
-
 .card-price {
-
 }
-
-
-// .row {
-//   text-decoration: none;
-// }
