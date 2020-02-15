@@ -22,19 +22,19 @@ h1 {
 }
 
 .mapboxgl-canvas {
-
+  flex-grow: 10;
   padding-right: 20px;
   padding-top: 20px;
 }
 
 #map {
+  flex-grow: 2;
   height: 100vh;
   position: sticky;
   top: 20px;
   border-radius: 5px;
 
 }
-
 
 .card-campervan {
   display: grid;
@@ -48,6 +48,7 @@ h1 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 
 @media(max-width: 768px) {
   .card-campervan{
@@ -103,11 +104,11 @@ h1 {
 }
 
 .link-card {
-  height: 300px;
+  height: 150px;
   width: 100%;
 
   img {
-    height: 300px;
+    height: 150px;
     width: 100%;
     object-fit: contain
   }
@@ -115,11 +116,11 @@ h1 {
 
 .campervan-info {
   display: flex;
-  padding: 16px;
+  // padding: 16px;
   // align-items: flex-end;
   justify-content: space-between;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .card-description {
